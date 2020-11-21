@@ -1,0 +1,12 @@
+{
+  "name": "covid-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pomegranitedesign/covid-19-stats.git",
+  "author": "Dmitriy Shin <dimashin9@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch:client": "cd frontend && yarn start",
+    "watch:server": "cd backend && yarn dev"
+  }
+}

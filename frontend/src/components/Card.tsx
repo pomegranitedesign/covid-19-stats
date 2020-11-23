@@ -1,17 +1,20 @@
 import {
   Card as MuiCard,
   CardProps as MuiCardProps,
+  GridProps as MuiGridProps,
   Grid,
   makeStyles,
 } from '@material-ui/core';
 import React from 'react';
 import Typography from './Typography';
+import Value from './Value';
+import { extractNumbers } from '../utils/extractDigits';
 
 const useStyles = makeStyles(
   () => ({
     root: {
       padding: 20,
-      minHeight: 300,
+      minHeight: 400,
       width: 'auto',
     },
     title: {
@@ -23,10 +26,11 @@ const useStyles = makeStyles(
 
 type TypographyAlignType = 'center' | 'left' | 'right' | 'inherit' | 'justify';
 
-type CardProps = MuiCardProps & {
-  title: string;
-  titleAlign?: TypographyAlignType;
-};
+type CardProps = MuiGridProps &
+  MuiCardProps & {
+    title: string;
+    titleAlign?: TypographyAlignType;
+  };
 
 function Card({
   title,
@@ -34,11 +38,19 @@ function Card({
   titleAlign,
 }: React.PropsWithChildren<CardProps>) {
   const classes = useStyles();
+  const [textPart, digitsPart] = extractNumbers(title);
+
   return (
-    <Grid item>
+    <Grid lg={12} item>
       <MuiCard elevation={4} className={classes.root}>
         <Typography variant='h5' align={titleAlign} className={classes.title}>
-          {title}
+          {digitsPart ? (
+            <React.Fragment>
+              {textPart} <Value value={digitsPart} />
+            </React.Fragment>
+          ) : (
+            title
+          )}
         </Typography>
         {children}
       </MuiCard>

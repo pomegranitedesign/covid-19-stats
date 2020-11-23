@@ -6,8 +6,8 @@
   "author": "Dmitriy Shin <dimashin9@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "watch:client": "cd frontend && yarn start",
-    "watch:server": "cd backend && yarn dev",
-    "install:all": "cd frontend && yarn && cd ../backend && yarn"
+    "watch:client": "cd frontend && npm start",
+    "watch:server": "cd backend && npm run dev",
+    "install:all": "cd frontend && npm i && cd ../backend && npm i"
   }
 }

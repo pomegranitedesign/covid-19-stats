@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from './Header';
 import Cards from './Cards';
+import Main from '../layouts/Main';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
+    <Main>
       <Cards />
-    </div>
+    </Main>
   );
 }
 

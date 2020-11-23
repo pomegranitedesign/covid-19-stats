@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "watch:client": "cd frontend && yarn start",
-    "watch:server": "cd backend && yarn dev"
+    "watch:server": "cd backend && yarn dev",
+    "install:all": "cd frontend && yarn && cd ../backend && yarn"
   }
 }

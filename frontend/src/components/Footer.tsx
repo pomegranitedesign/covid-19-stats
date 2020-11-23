@@ -10,7 +10,6 @@ const useStyles = makeStyles(
       alignItems: 'center',
       justifyContent: 'center',
       bottom: 0,
-      marginTop: 50,
       height: 80,
       width: '100% !important',
       background: theme.palette.secondary.main,

@@ -6,7 +6,7 @@ function Main({ children }: React.PropsWithChildren<any>) {
   return (
     <React.Fragment>
       <Header />
-      {children}
+      <div style={{ margin: '40px 0 150px 0' }}>{children}</div>
       <Footer />
     </React.Fragment>
   );

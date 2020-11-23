@@ -1,10 +1,21 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import Typography from './Typography';
 
 const useStyles = makeStyles(
-  () => ({
-    root: {},
+  (theme) => ({
+    root: {
+      position: 'fixed',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      bottom: 0,
+      marginTop: 50,
+      height: 80,
+      width: '100% !important',
+      background: theme.palette.secondary.main,
+      color: theme.palette.secondary.dark,
+    },
   }),
   { name: 'Footer' },
 );
@@ -13,13 +24,9 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root}>
-      <Grid item>
-        <Typography variant='body2' align='center'>
-          Hello World
-        </Typography>
-      </Grid>
-    </Grid>
+    <footer className={classes.root}>
+      <Typography variant='body2'>Copyright@2020</Typography>
+    </footer>
   );
 }
 

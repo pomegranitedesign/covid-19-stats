@@ -6,7 +6,7 @@ import Typography from './Typography';
 import Value from './Value';
 import { DataInfo } from './GlobalData';
 
-Geocode.setApiKey('AIzaSyBSXoKnbgkMHTDpWT1rYxrWh911BDDZnnI');
+Geocode.setApiKey(process?.env?.REACT_APP_GEOCODE_API_KEY);
 
 function CountryData() {
   const [currentCountry, setCurrentCountry] = React.useState('');

@@ -7,6 +7,11 @@ export const theme = createMuiTheme({
       dark: darken('#0be881', 0.24),
       light: lighten('#0be881', 0.24),
     },
+    secondary: {
+      main: '#dcdde1',
+      dark: darken('#dcdde1', 0.24),
+      light: lighten('#dcdde1', 0.24),
+    },
   },
 
   typography: {
